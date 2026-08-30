@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>San Antonio, TX | Pan-Asia Supermarket Locations</title>
+<meta name="description" content="Our next Texas storefront is on its way — construction is underway on Colony Drive.">
+<link rel="icon" href="../assets/images/logo.jpg">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html"><img src="../assets/images/logo.jpg" alt="Pan-Asia Supermarket logo"></a>
+    <nav class="nav-desktop" aria-label="Primary">
+      <ul>
+        <li><a class="nav-link" href="../index.html">Home</a></li>
+        <li><a class="nav-link" href="../about.html">About Us</a></li>
+        <li class="nav-item-dropdown">
+          <a class="nav-link is-active" href="../locations.html">Store Locations
+            <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="dropdown-panel">
+            <a class="dropdown-link" href="omaha.html"><strong>Omaha, NE</strong><span>Asian Market &middot; since 2010</span></a>
+            <a class="dropdown-link" href="overland-park-12035.html"><strong>Overland Park, KS</strong><span>12035 Metcalf Ave.</span></a>
+            <a class="dropdown-link" href="overland-park-10336.html"><strong>Overland Park, KS</strong><span>10336 Metcalf Ave. &middot; Oriental Supermarket</span></a>
+            <a class="dropdown-link" href="manchester.html"><strong>Manchester, MO</strong><span>Corporate HQ &middot; since 2017</span></a>
+            <a class="dropdown-link" href="tulsa.html"><strong>Tulsa, OK</strong><span>since 2022</span></a>
+            <a class="dropdown-link" href="milwaukee.html"><strong>Milwaukee, WI</strong><span>West Allis &middot; since 2025</span></a>
+            <a class="dropdown-link" href="nashville.html"><strong>Nashville, TN</strong><span>Antioch &middot; since 2026</span></a>
+            <a class="dropdown-link" href="san-antonio.html"><strong>San Antonio, TX</strong><span class="tag-soon">Opening early 2027</span></a>
+            <a class="dropdown-link" href="detroit.html"><strong>Detroit, MI</strong><span class="tag-soon">Opening 2027</span></a>
+          </div>
+        </li>
+        <li><a class="nav-link" href="../employment.html">Careers</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-outline btn-sm" href="../locations.html">Find a Store</a>
+      <a class="btn btn-primary btn-sm" href="../employment.html">We're Hiring</a>
+    </div>
+    <button class="nav-toggle" data-nav-toggle aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="nav-mobile" data-nav-mobile>
+  <div class="nav-mobile-head">
+    <img src="../assets/images/logo.jpg" alt="Pan-Asia Supermarket" style="height:34px;">
+    <button class="nav-toggle" data-nav-close aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile-body">
+    <a class="nav-mobile-link" href="../index.html">Home</a>
+    <a class="nav-mobile-link" href="../about.html">About Us</a>
+    <a class="nav-mobile-link" href="../locations.html">Store Locations</a>
+    <a class="nav-mobile-link" href="../employment.html">Careers</a>
+    <div style="margin-top:24px; display:flex; flex-direction:column; gap:12px;">
+      <a class="btn btn-outline btn-block" href="../locations.html">Find a Store</a>
+      <a class="btn btn-primary btn-block" href="../employment.html">We're Hiring</a>
+    </div>
+  </div>
+</div>
+
+<section class="page-hero" style="background-image:url('../assets/images/store-san-antonio.jpg');">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../locations.html">Store Locations</a> / San Antonio, TX</div>
+    <span class="badge badge-soon" style="margin-bottom:16px;display:inline-flex;">Opening Early 2027</span>
+    <h1>Pan-Asia Supermarket — San Antonio, TX</h1>
+    <p class="lead">Our next Texas storefront is on its way — construction is underway on Colony Drive.</p>
+    <div class="hero-actions"><a class="btn btn-ghost-light" href="../locations.html">Back to All Locations</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split" style="align-items:flex-start;">
+      <div style="display:flex; flex-direction:column; gap:20px;" data-reveal>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-7.5 7-12a7 7 0 0 0-14 0c0 4.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Address</h3>
+          <p style="margin:0 0 14px;">3713 Colony Dr<br>San Antonio, TX 78230</p>
+          <a class="btn btn-outline btn-sm" href="https://maps.app.goo.gl/c4rQ8hayC1dhTAkG9" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg>Opening Status</h3>
+          <p style="margin:0;"><span class="badge badge-soon">Opening Early 2027</span></p>
+          <p class="color-muted" style="margin:10px 0 0;">Want to be first in line, or interested in a role here? Email us and we'll keep you posted.</p>
+          <a class="btn btn-primary btn-sm" style="margin-top:6px;" href="mailto:admin@panasiamarket.com?subject=San%20Antonio,%20TX%20-%20interest">Email Us</a>
+        </div>
+      </div>
+      <div data-reveal>
+        <div class="map-shell">
+          <div id="map-san-antonio" class="map-canvas h-md" role="img" aria-label="Map showing the San Antonio, TX Pan-Asia location"></div>
+        </div>
+<div style="margin-top:14px;"><a class="back-link" href="https://maps.app.goo.gl/c4rQ8hayC1dhTAkG9" target="_blank" rel="noopener">Open in Google Maps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="split">
+      <div data-reveal>
+        <div class="eyebrow">Get in touch</div>
+        <h2>Get notified when San Antonio, TX opens</h2>
+        <p class="color-muted">Leave your details and we'll follow up as the opening date approaches.</p>
+        <form class="contact-form" data-contact-form data-store-email="admin@panasiamarket.com" data-store-label="San Antonio, TX" style="margin-top:24px;">
+          <div class="form-row">
+            <div class="field"><label for="name-san-antonio">Name *</label><input id="name-san-antonio" type="text" required></div>
+            <div class="field"><label for="email-san-antonio">Email *</label><input id="email-san-antonio" type="email" required></div>
+          </div>
+          <div class="field"><label for="msg-san-antonio">Message *</label><textarea id="msg-san-antonio" required></textarea></div>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <p class="form-note" data-form-status>This message goes straight to this store's inbox — we try to respond within 24 hours.</p>
+        </form>
+      </div>
+      <div class="split-media" data-reveal>
+        <img src="../assets/images/store-san-antonio.jpg" alt="San Antonio, TX Pan-Asia store">
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/images/logo.jpg" alt="Pan-Asia Supermarket">
+        <p>The largest Asian grocery chain in your town — fresh seafood, meat, produce and 20,000+ specialty products across 9 locations.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../locations.html">Store Locations</a></li>
+          <li><a href="../employment.html">Careers</a></li>
+          <li><a href="mailto:admin@panasiamarket.com">Partner With Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="omaha.html">Omaha, NE</a></li>
+          <li><a href="overland-park-12035.html">Overland Park, KS</a></li>
+          <li><a href="manchester.html">Manchester, MO</a></li>
+          <li><a href="tulsa.html">Tulsa, OK</a></li>
+          <li><a href="milwaukee.html">Milwaukee, WI</a></li>
+          <li><a href="../locations.html">View all 9 &rarr;</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:admin@panasiamarket.com">admin@PanAsiaMarket.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> Pan-Asia Supermarket. All rights reserved.</span>
+      <span>Designed for freshness, built for every neighborhood.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../js/locations-data.js"></script>
+<script src="../js/map.js"></script>
+<script src="../js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    PanAsiaMap.init("map-san-antonio", { basePath: "../", onlyId: "san-antonio" });
+  });
+</script>
+</body>
+</html>
