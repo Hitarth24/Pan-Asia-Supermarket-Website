@@ -128,7 +128,7 @@
         .then(function (res) { return res.json().catch(function () { return {}; }); })
         .then(function () {
           if (note) {
-            note.textContent = "Thank you for contacting us! If needed, you will hear back within 48–72 hours.";
+            note.textContent = "Thank you for reaching out! We'll be in touch soon. If you need immediate assistance, please call the store directly.";
             note.style.color = "var(--green-700)";
           }
           form.reset();
@@ -148,4 +148,37 @@
   /* Footer year */
   var yearEl = document.querySelector("[data-year]");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* WeChat QR popup — WeChat contacts are added by scanning, not by
+     following a link, so the WeChat social badge opens a modal with
+     that store's QR code instead of navigating away. */
+  var qrModal = document.querySelector("[data-qr-modal]");
+  if (qrModal) {
+    var qrImage = qrModal.querySelector("[data-qr-image]");
+    var qrCaption = qrModal.querySelector("[data-qr-caption]");
+
+    function openQrModal(src, label) {
+      if (qrImage) qrImage.src = src;
+      if (qrCaption) qrCaption.textContent = "Scan to add " + label + " on WeChat";
+      qrModal.classList.add("is-open");
+      qrModal.setAttribute("aria-hidden", "false");
+    }
+    function closeQrModal() {
+      qrModal.classList.remove("is-open");
+      qrModal.setAttribute("aria-hidden", "true");
+    }
+
+    document.querySelectorAll("[data-qr-trigger]").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        openQrModal(btn.getAttribute("data-qr"), btn.getAttribute("data-store-name") || "us");
+      });
+    });
+    qrModal.querySelectorAll("[data-qr-close]").forEach(function (el) {
+      el.addEventListener("click", closeQrModal);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeQrModal();
+    });
+  }
 })();

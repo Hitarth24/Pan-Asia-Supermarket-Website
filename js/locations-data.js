@@ -18,7 +18,7 @@ const PAN_ASIA_LOCATIONS = [
     departments: ["Produce", "Meat", "Live & Fresh Seafood", "Grocery", "Dairy", "Frozen", "Wine & Liquor", "Fresh Deli & Bakery", "Hot Food — Asia Bistro", "Boba Tea — Bubble Boba"],
     dining: [
       { name: "Asia Bistro", kind: "hotfood", hours: null, phone: null, phoneHref: null, orderUrl: null },
-      { name: "Bubble Boba", kind: "boba", hours: null, phone: null, phoneHref: null, orderUrl: null }
+      { name: "Bubble Boba", kind: "boba", logo: "assets/images/panasia_bobatea.png", hours: null, phone: null, phoneHref: null, orderUrl: null }
     ],
     lat: 41.262072,
     lng: -96.030482,
@@ -44,8 +44,8 @@ const PAN_ASIA_LOCATIONS = [
     hoursNote: "Open 365 days a year.",
     departments: ["Produce", "Meat", "Live & Fresh Seafood", "Grocery", "Dairy", "Frozen", "Lottery", "Sushi", "Bakery", "Café — order online", "Boba Tea — order online"],
     dining: [
-      { name: "Café", kind: "cafe", hours: [["Daily", "10:30 AM – 8:00 PM"]], phone: null, phoneHref: null, orderUrl: "https://www.onlineorder.abcpos.com/Kansas-cafe-boba/da83a69380f14c5fbe055b7f86b281b9" },
-      { name: "Boba Tea", kind: "boba", hours: [["Daily", "10:30 AM – 8:00 PM"]], phone: null, phoneHref: null, orderUrl: "https://www.onlineorder.abcpos.com/Kansas-cafe-boba/da83a69380f14c5fbe055b7f86b281b9" }
+      { name: "Café", kind: "cafe", logo: "assets/images/panasia_bakery.png", hours: [["Daily", "10:30 AM – 8:00 PM"]], phone: null, phoneHref: null, orderUrl: "https://www.onlineorder.abcpos.com/Kansas-cafe-boba/da83a69380f14c5fbe055b7f86b281b9" },
+      { name: "Boba Tea", kind: "boba", logo: "assets/images/panasia_bobatea.png", hours: [["Daily", "10:30 AM – 8:00 PM"]], phone: null, phoneHref: null, orderUrl: "https://www.onlineorder.abcpos.com/Kansas-cafe-boba/da83a69380f14c5fbe055b7f86b281b9" }
     ],
     lat: 38.911268,
     lng: -94.667652,
@@ -81,10 +81,9 @@ const PAN_ASIA_LOCATIONS = [
     id: "manchester",
     name: "Pan-Asia Supermarket",
     city: "Manchester, MO",
-    subtitle: "Corporate Headquarters · Serving Greater St. Louis",
+    subtitle: "Serving Greater St. Louis",
     since: 2017,
     status: "open",
-    headquarters: true,
     address: "14246 Manchester Rd.",
     cityStateZip: "Manchester, MO 63011",
     phone: "(636) 220-9999",
@@ -94,11 +93,12 @@ const PAN_ASIA_LOCATIONS = [
     hoursNote: "Open every day of the year — may close earlier on major holidays.",
     departments: ["Produce", "Meat", "Live & Fresh Seafood", "Grocery", "Dairy", "Frozen", "Wine & Liquor", "Fresh Deli & Bakery"],
     dining: [
-      { name: "China Bistro", kind: "hotfood", hours: [["Daily", "10:30 AM – 3:00 PM"], ["Daily", "3:30 PM – 6:45 PM"]], phone: "(636) 220-3144", phoneHref: "tel:+16362203144", orderUrl: "https://www.onlineorder.abcpos.com/ChinaBistro/ebd9b5529db940a9bceeb2a394c8b56e" },
-      { name: "Bubble Cup TeaZone", kind: "boba", hours: null, phone: null, phoneHref: null, orderUrl: null }
+      { name: "China Bistro", kind: "hotfood", logo: "assets/images/logo-china-bistro.jpg", hours: [["Daily", "10:30 AM – 7:00 PM"]], phone: "(636) 220-3144", phoneHref: "tel:+16362203144", orderUrl: "https://www.onlineorder.abcpos.com/ChinaBistro/ebd9b5529db940a9bceeb2a394c8b56e" },
+      { name: "Cube Tea Studio", kind: "boba", logo: "assets/images/logo-cube-tea.png", hours: [["Sun – Thu", "11:00 AM – 7:30 PM"], ["Fri – Sat", "11:00 AM – 8:00 PM"]], phone: null, phoneHref: null, orderUrl: "https://cubeteastudiostl.com" },
+      { name: "Hkahku Sushi", kind: "sushi", logo: "assets/images/logo-hkahku-sushi.jpg", hours: [["Sun – Thu", "9:00 AM – 8:00 PM"], ["Fri – Sat", "9:00 AM – 8:30 PM"]], phone: null, phoneHref: null, orderUrl: null },
+      { name: "The Face Shop", kind: "retail", logo: "assets/images/logo-face-shop.png", hours: [["Mon – Thu", "10:00 AM – 7:30 PM"], ["Fri – Sun", "10:00 AM – 8:00 PM"]], phone: null, phoneHref: null, orderUrl: null }
     ],
     retailServices: [
-      { name: "Korean Beauty Supply — The Face Shop", detail: "" },
       { name: "Zabiha Halal Meat Butcher Shop", detail: "Call (636) 675-4965" }
     ],
     corporatePositions: ["Corporate Accountant", "IT Manager", "Marketing Specialist / Manager", "HR Manager", "Software Developer", "Business / Data Analyst"],
@@ -126,7 +126,7 @@ const PAN_ASIA_LOCATIONS = [
     departments: ["Produce", "Meat", "Live & Fresh Seafood", "Grocery", "Dairy", "Frozen", "Lottery", "Wine & Liquor", "Fresh Deli & Bakery"],
     dining: [
       { name: "Jade Grill", kind: "hotfood", hours: [["Sun – Thu", "10:30 AM – 7:30 PM"], ["Fri – Sat", "10:30 AM – 8:00 PM"]], phone: "(918) 940-7572", phoneHref: "tel:+19189407572", orderUrl: null },
-      { name: "Tsaocaa Boba Tea", kind: "boba", hours: [["Sun – Thu", "10:30 AM – 7:30 PM"], ["Fri – Sat", "10:30 AM – 8:00 PM"]], phone: "(918) 940-7573", phoneHref: "tel:+19189407573", orderUrl: null }
+      { name: "Boba Tea", kind: "boba", hours: [["Sun – Thu", "10:30 AM – 7:30 PM"], ["Fri – Sat", "10:30 AM – 8:00 PM"]], phone: "(918) 940-7573", phoneHref: "tel:+19189407573", orderUrl: null }
     ],
     lat: 36.060866,
     lng: -95.869745,
@@ -152,8 +152,8 @@ const PAN_ASIA_LOCATIONS = [
     hoursNote: "Open 365 days a year.",
     departments: ["Produce", "Meat", "Live & Fresh Seafood", "Grocery", "Dairy", "Frozen", "Bakery", "Sushi", "Café — order online", "Boba Tea — order online"],
     dining: [
-      { name: "Café", kind: "cafe", hours: [["Daily", "10:30 AM – 7:30 PM"]], phone: null, phoneHref: null, orderUrl: "https://www.onlineorder.abcpos.com/Milwaukee-cafe/a2366adad7a54a71a183e09cc035c342" },
-      { name: "Boba Tea", kind: "boba", hours: [["Daily", "10:30 AM – 7:30 PM"]], phone: null, phoneHref: null, orderUrl: "https://www.onlineorder.abcpos.com/Milwaukee-boba/8aa15257873f43c4919df450f4d1d265" }
+      { name: "Café", kind: "cafe", logo: "assets/images/panasia_bakery.png", hours: [["Daily", "10:30 AM – 7:30 PM"]], phone: null, phoneHref: null, orderUrl: "https://www.onlineorder.abcpos.com/Milwaukee-cafe/a2366adad7a54a71a183e09cc035c342" },
+      { name: "Boba Tea", kind: "boba", logo: "assets/images/panasia_bobatea.png", hours: [["Daily", "10:30 AM – 7:30 PM"]], phone: null, phoneHref: null, orderUrl: "https://www.onlineorder.abcpos.com/Milwaukee-boba/8aa15257873f43c4919df450f4d1d265" }
     ],
     lat: 43.017074,
     lng: -87.998986,
@@ -179,8 +179,8 @@ const PAN_ASIA_LOCATIONS = [
     hoursNote: "Open 365 days a year.",
     departments: ["Produce", "Meat", "Live & Fresh Seafood", "Grocery", "Dairy", "Frozen", "Bakery", "Sushi"],
     dining: [
-      { name: "Café", kind: "cafe", hours: [["Daily", "10:30 AM – 7:30 PM"]], phone: null, phoneHref: null, orderUrl: "https://www.onlineorder.abcpos.com/Pan-Asia-Supermarket-of-Nashville/ae224714258d47c18964d65717c4f8b3" },
-      { name: "Boba Tea", kind: "boba", hours: [["Daily", "10:30 AM – 7:30 PM"]], phone: null, phoneHref: null, orderUrl: "https://www.onlineorder.abcpos.com/Pan-Asia-Supermarket-of-Nashville/9163da2564704defa9176e290c301cc3" }
+      { name: "Café", kind: "cafe", logo: "assets/images/panasia_bakery.png", hours: [["Daily", "10:30 AM – 7:30 PM"]], phone: null, phoneHref: null, orderUrl: "https://www.onlineorder.abcpos.com/Pan-Asia-Supermarket-of-Nashville/ae224714258d47c18964d65717c4f8b3" },
+      { name: "Boba Tea", kind: "boba", logo: "assets/images/panasia_bobatea.png", hours: [["Daily", "10:30 AM – 7:30 PM"]], phone: null, phoneHref: null, orderUrl: "https://www.onlineorder.abcpos.com/Pan-Asia-Supermarket-of-Nashville/9163da2564704defa9176e290c301cc3" }
     ],
     lat: 36.052002,
     lng: -86.667104,
@@ -205,18 +205,18 @@ const PAN_ASIA_LOCATIONS = [
     page: "locations/san-antonio.html"
   },
   {
-    id: "detroit",
+    id: "novi",
     name: "Pan-Asia Supermarket",
-    city: "Detroit, MI",
+    city: "Novi, MI",
     status: "coming-soon",
     comingLabel: "Opening 2027",
     address: null,
-    cityStateZip: "Detroit, MI",
-    lat: 42.331551,
-    lng: -83.04664,
+    cityStateZip: "Novi, MI",
+    lat: 42.48059,
+    lng: -83.475491,
     mapUrl: null,
     image: null,
-    page: "locations/detroit.html"
+    page: "locations/novi.html"
   }
 ];
 

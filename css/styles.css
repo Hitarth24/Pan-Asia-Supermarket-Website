@@ -456,6 +456,12 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
   overflow: hidden;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--ink-100);
+  /* Leaflet's internal panes use z-index up to 700 (popups/markers) — without
+     this, they compare against page-level UI like the mobile nav (z-index 200)
+     and dropdown, and can render on top of them. This contains Leaflet's
+     stacking inside its own context so it never escapes the map box. */
+  position: relative;
+  z-index: 0;
 }
 .map-canvas { width: 100%; height: 100%; background: var(--sand-100); }
 .map-canvas.h-lg { height: 560px; }
@@ -481,6 +487,46 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 .map-legend { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 18px; font-size: 0.88rem; color: var(--ink-500); }
 .map-legend span { display: inline-flex; align-items: center; gap: 8px; }
 .legend-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+
+/* ---------- QR popup (WeChat) ---------- */
+.qr-modal {
+  position: fixed; inset: 0; z-index: 300;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+.qr-modal.is-open { opacity: 1; visibility: visible; }
+.qr-modal-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(20, 22, 18, 0.68);
+  backdrop-filter: blur(2px);
+}
+.qr-modal-panel {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 28px;
+  max-width: 340px;
+  width: 100%;
+  text-align: center;
+  transform: translateY(10px) scale(0.98);
+  transition: transform 0.2s ease;
+}
+.qr-modal.is-open .qr-modal-panel { transform: translateY(0) scale(1); }
+.qr-modal-panel img { border-radius: var(--radius-md); margin: 0 auto 16px; }
+.qr-modal-panel p { margin: 0; font-family: var(--font-display); font-weight: 600; color: var(--ink-900); }
+.qr-modal-close {
+  position: absolute; top: -14px; right: -14px;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--ink-900); color: var(--white);
+  border: 3px solid var(--white);
+  font-size: 1.2rem; line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.social-badge.is-button { border: none; cursor: pointer; font: inherit; }
 
 /* ---------- Split layout ---------- */
 .split {
@@ -543,6 +589,8 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
   position: relative;
 }
 .dining-card-media img { width: 100%; height: 100%; object-fit: cover; }
+.dining-card-media.is-logo { background: var(--white); }
+.dining-card-media.is-logo img { object-fit: contain; padding: 18px; }
 .dining-card-media svg { width: 40px; height: 40px; opacity: 0.55; }
 .dining-card-kind {
   position: absolute; top: 12px; left: 12px;
@@ -669,13 +717,7 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 /* ---------- Footer ---------- */
 .site-footer { background: var(--ink-900); color: var(--ink-100); padding: 72px 0 28px; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 40px; }
-.footer-brand img {
-  height: 40px;
-  margin-bottom: 16px;
-  background: var(--white);
-  padding: 8px 14px;
-  border-radius: var(--radius-sm);
-}
+.footer-brand img { height: 40px; margin-bottom: 16px; }
 .footer-brand p { color: var(--ink-300); font-size: 0.92rem; max-width: 280px; }
 .footer-col h4 {
   color: var(--white); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em;
