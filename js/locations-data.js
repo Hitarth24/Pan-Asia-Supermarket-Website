@@ -23,7 +23,7 @@ const PAN_ASIA_LOCATIONS = [
     lat: 41.262072,
     lng: -96.030482,
     mapUrl: "https://g.page/asian-market-omaha?share",
-    image: "assets/images/store-omaha.jpg",
+    image: "assets/images/panasiacover_asianmarket.jpg",
     applyUrl: "https://docs.google.com/forms/d/1QfgeqlTwi9KZdfq7MPmSGV2q_AFLUQQDCKXUl0NytFM/viewform",
     social: { facebook: "https://www.facebook.com/Omaha76thDodge/", wechat: "https://u.wechat.com/kBYwwEesfZRrcp-Kw6qmSTU" },
     newsletter: { type: "link", url: "https://visitor.r20.constantcontact.com/manage/optin?v=0013jRMC6JeuR8clhco9neIeDLSdfNFcDkYN2h1iROwgg4lkueLucy6hNc0LWuY_beX3ZZ4ObvtlDhpaFkMUmvH71F-bwltxzaFr5rKaUbiV7g%3D" },
@@ -51,7 +51,7 @@ const PAN_ASIA_LOCATIONS = [
     lat: 38.911268,
     lng: -94.667652,
     mapUrl: "https://goo.gl/maps/6QWWiyZDvNXeY3qr9",
-    image: "assets/images/store-overland-park-12035.jpg",
+    image: "assets/images/newoverlandcover12035.jpg",
     applyUrl: "https://docs.google.com/forms/d/1OJLPezBhRrxGj7rfa7PMu_tRhgiJ7G7_CvMh8ncsm3k/viewform",
     social: { facebook: "http://www.facebook.com/panasiakansas", wechat: "http://weixin.qq.com/r/p3tZQWTEZTkarSAi9y61" },
     newsletter: { type: "embed", url: "https://panasiamarket.us1.list-manage.com/subscribe?u=59032f97e99b31207c51ec14d&id=4a2d053069" },
@@ -80,7 +80,7 @@ const PAN_ASIA_LOCATIONS = [
     social: { facebook: "https://www.facebook.com/orientalkansas" },
     newsletter: { type: "embed", url: "https://gmail.us18.list-manage.com/subscribe?u=691e77715624f797ee3bddfbb&id=e3b3232578" },
     dining: [
-      { name: "Cafe Vie", kind: "hotfood", hours: [["Mon – Sat", "11:00 AM – 8:15 PM"], ["Sunday", "11:00 AM – 7:45 PM"]], phone: "(913) 901-0565", phoneHref: "tel:+19139010565", orderUrl: "https://pos.chowbus.com/online-ordering/store/Cafe-Vie/44565" }
+      { name: "Cafe Vie", kind: "hotfood", logo: "assets/images/cafevielogo.png", hours: [["Mon – Sat", "11:00 AM – 8:15 PM"], ["Sunday", "11:00 AM – 7:45 PM"]], phone: "(913) 901-0565", phoneHref: "tel:+19139010565", orderUrl: "https://pos.chowbus.com/online-ordering/store/Cafe-Vie/44565" }
     ],
     page: "locations/overland-park-10336.html"
   },
