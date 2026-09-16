@@ -17,8 +17,8 @@ const PAN_ASIA_LOCATIONS = [
     hoursNote: "Open every day of the year — may close earlier on major holidays.",
     departments: ["Produce", "Meat", "Live & Fresh Seafood", "Grocery", "Dairy", "Frozen", "Wine & Liquor", "Fresh Deli & Bakery", "Hot Food — Asia Bistro", "Boba Tea — Bubble Boba"],
     dining: [
-      { name: "Asia Bistro", kind: "hotfood", hours: null, phone: null, phoneHref: null, orderUrl: null },
-      { name: "Bubble Boba", kind: "boba", logo: "assets/images/panasia_bobatea.png", hours: null, phone: null, phoneHref: null, orderUrl: null }
+      { name: "Asia Bistro", kind: "hotfood", logo: "assets/images/asiamarket.jpg", hours: null, phone: null, phoneHref: null, orderUrl: null },
+      { name: "Bubble Boba", kind: "boba", logo: "assets/images/bubbleboba.png", hours: null, phone: null, phoneHref: null, orderUrl: null }
     ],
     lat: 41.262072,
     lng: -96.030482,
@@ -26,6 +26,7 @@ const PAN_ASIA_LOCATIONS = [
     image: "assets/images/store-omaha.jpg",
     applyUrl: "https://docs.google.com/forms/d/1QfgeqlTwi9KZdfq7MPmSGV2q_AFLUQQDCKXUl0NytFM/viewform",
     social: { facebook: "https://www.facebook.com/Omaha76thDodge/", wechat: "https://u.wechat.com/kBYwwEesfZRrcp-Kw6qmSTU" },
+    newsletter: { type: "link", url: "https://visitor.r20.constantcontact.com/manage/optin?v=0013jRMC6JeuR8clhco9neIeDLSdfNFcDkYN2h1iROwgg4lkueLucy6hNc0LWuY_beX3ZZ4ObvtlDhpaFkMUmvH71F-bwltxzaFr5rKaUbiV7g%3D" },
     page: "locations/omaha.html"
   },
   {
@@ -53,6 +54,7 @@ const PAN_ASIA_LOCATIONS = [
     image: "assets/images/store-overland-park-12035.jpg",
     applyUrl: "https://docs.google.com/forms/d/1OJLPezBhRrxGj7rfa7PMu_tRhgiJ7G7_CvMh8ncsm3k/viewform",
     social: { facebook: "http://www.facebook.com/panasiakansas", wechat: "http://weixin.qq.com/r/p3tZQWTEZTkarSAi9y61" },
+    newsletter: { type: "embed", url: "https://panasiamarket.us1.list-manage.com/subscribe?u=59032f97e99b31207c51ec14d&id=4a2d053069" },
     page: "locations/overland-park-12035.html"
   },
   {
@@ -75,6 +77,11 @@ const PAN_ASIA_LOCATIONS = [
     mapUrl: "https://goo.gl/maps/kFtV7RgmUy63tsGEA",
     image: "assets/images/store-overland-park-10336.jpg",
     applyUrl: "https://docs.google.com/forms/d/1C7PHJhChPiFpeoPLNsBGrhaLHBL7NEM4h2Tmqt-QXhc/viewform",
+    social: { facebook: "https://www.facebook.com/orientalkansas" },
+    newsletter: { type: "embed", url: "https://gmail.us18.list-manage.com/subscribe?u=691e77715624f797ee3bddfbb&id=e3b3232578" },
+    dining: [
+      { name: "Cafe Vie", kind: "hotfood", hours: [["Mon – Sat", "11:00 AM – 8:15 PM"], ["Sunday", "11:00 AM – 7:45 PM"]], phone: "(913) 901-0565", phoneHref: "tel:+19139010565", orderUrl: "https://pos.chowbus.com/online-ordering/store/Cafe-Vie/44565" }
+    ],
     page: "locations/overland-park-10336.html"
   },
   {
@@ -108,6 +115,7 @@ const PAN_ASIA_LOCATIONS = [
     image: "assets/images/store-manchester.jpg",
     applyUrl: "https://docs.google.com/forms/d/1SVz23_ChLBZvmvADWcMtngB35kdssdt3lF8etDyekRY/viewform",
     social: { facebook: "https://www.facebook.com/PanAsiaSTLOUIS/", instagram: "https://www.instagram.com/panasiastlouis/", wechat: "http://weixin.qq.com/r/mWW2rqrERfc6re7N9zCL" },
+    newsletter: { type: "embed", url: "https://panasiasupermarket.us13.list-manage.com/subscribe?u=cf70f2ec1940858cd7bbde073&id=163bc51274" },
     page: "locations/manchester.html"
   },
   {
@@ -134,6 +142,7 @@ const PAN_ASIA_LOCATIONS = [
     image: "assets/images/store-tulsa.jpg",
     applyUrl: "https://docs.google.com/forms/d/14-LCqRnPbJa_NFo-Ef6wzgf3vwhbgwYkYeaJ0tYcywA/viewform",
     social: { facebook: "http://www.facebook.com/panasiatulsa", instagram: "https://www.instagram.com/panasiatulsa/", tiktok: "https://www.tiktok.com/@panasiatulsa", wechat: "https://u.wechat.com/kNLU_nRj1JP_6_-K7OSvORE" },
+    newsletter: { type: "embed", url: "https://panasiasupermarket.us14.list-manage.com/subscribe?u=74ced53f6240725c6e4ec2935&id=65865a1850" },
     page: "locations/tulsa.html"
   },
   {
@@ -161,6 +170,7 @@ const PAN_ASIA_LOCATIONS = [
     image: "assets/images/store-milwaukee.jpg",
     applyUrl: "https://forms.gle/fvQFVUo1YGgvGS5b7",
     social: { facebook: "http://www.facebook.com/panasiakansas", wechat: "https://u.wechat.com/kMSCCqSnfk-REep3HP7kTys" },
+    newsletter: { type: "embed", url: "https://gmail.us11.list-manage.com/subscribe?u=bd178bcaef2bb4f0314cca7aa&id=1de3b94e19" },
     page: "locations/milwaukee.html"
   },
   {
@@ -187,7 +197,8 @@ const PAN_ASIA_LOCATIONS = [
     mapUrl: "https://maps.app.goo.gl/ssfH8AYfTABHZRLh8",
     image: "assets/images/store-nashville.jpg",
     applyUrl: "https://docs.google.com/forms/d/1a4n_P7llgudLylK4r_NBiNn4OWycwVtKaO_oWoxwEvM/viewform",
-    social: { facebook: "http://www.facebook.com/panasiakansas", wechat: "https://u.wechat.com/kIky7t_SzaDW8Sq1CgCl0Pw" },
+    social: { facebook: "https://www.facebook.com/PanAsiaNashville/", wechat: "https://u.wechat.com/kIky7t_SzaDW8Sq1CgCl0Pw" },
+    newsletter: { type: "embed", url: "https://gmail.us6.list-manage.com/subscribe?u=173f777cd5a22a7c91da782a7&id=523ffa3547" },
     page: "locations/nashville.html"
   },
   {
